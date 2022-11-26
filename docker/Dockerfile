@@ -16,8 +16,8 @@ WORKDIR /go/src/focalboard
 ADD . /go/src/focalboard
 
 # Get target architecture 
-ARG TARGETOS = linux
-ARG TARGETARCH  = arm64
+ARG TARGETOS 
+ARG TARGETARCH 
 
 RUN EXCLUDE_PLUGIN=true EXCLUDE_SERVER=true EXCLUDE_ENTERPRISE=true make server-docker os=${TARGETOS} arch=${TARGETARCH}
 
